@@ -1,0 +1,34 @@
+<hello name="{{ name }}"></hello>
+
+<div>
+	<div id="info">
+		<div class="container">
+			<img src="avatar2.jpg" alt="Avatar">
+      <p>Hello. Where should I go?</p>
+      <span class="time-right">11:00</span>
+    </div>
+
+    <div class="container darker">
+      <img src="avatar1.jpg" alt="Avatar" class="right">
+      <p>You should go to the customer XYZ plant</p>
+      <span class="time-left">11:01</span>
+    </div>
+
+    <div class="container">
+      <img src="avatar2.jpg" alt="Avatar">
+      <p>What is the ETA?</p>
+      <span class="time-right">11:02</span>
+    </div>
+
+    <div class="container darker">
+      <img src="avatar1.jpg" alt="Avatar" class="right">
+      <p>It's goin to take 2 hours</p>
+      <span class="time-left">11:05</span>
+    </div>
+  </div>
+  <div>
+    <agm-map [latitude]="lat" [longitude]="lng">
+      <agm-direction *ngIf="dir" [origin]="dir.origin" [destination]="dir.destination" [visible]="show"></agm-direction>
+    </agm-map>
+  </div>
+</div>
